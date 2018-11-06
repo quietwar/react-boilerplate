@@ -5,6 +5,13 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 const moduleObj = {
   loaders: [
     {
+   test: /\.css$/,
+   use: [
+     'to-string-loader',
+     'css-loader'
+   ]
+ }
+ {
       test: /\.js$/,
       exclude: /node_modules/,
       loaders: ['babel-loader']
